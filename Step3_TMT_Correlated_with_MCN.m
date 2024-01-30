@@ -8,7 +8,7 @@ TMTBA_Score=xlsread('***\TMTBA_Scores.xlsx');
 Pearson_r=zeros(size(MCN,2),size(MCN,2));
 Pearson_p=zeros(size(MCN,2),size(MCN,2));
 for i=1:size(MCN,2)
-    for j=i+1:size(MCN,2)
+    for j=1:size(MCN,2)
         [Pearson_r(i,j),Pearson_p(i,j)]=corr(squeeze(MCN(:,i,j)),TMTBA_Score);
     end
 end
